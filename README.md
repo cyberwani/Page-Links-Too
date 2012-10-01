@@ -1,4 +1,4 @@
 Page-Links-Too
 ==============
 
-Lets you make a Wordpress post type link to something else.
+This plugin is based in Page Link To of @markjaquith
