@@ -1,0 +1,5 @@
+.page_links_too{}
+.page_links_too p{ margin: 0 0 5px 0; }
+.page_links_too input[type="radio"], .page_links_too input[type="checkbox"]{ margin-right: 2px; }
+.page_links_too input[type="text"]{ margin: 0; }
+.page_links_too .plt_expander{ padding: 0 0 0 15px; }
