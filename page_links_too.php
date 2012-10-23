@@ -190,11 +190,6 @@ class Page_Links_Too
 		foreach ( (array) $links_to as $link )
 			$this->targets[$blog_id][$link->post_id] = $link->meta_value;
 
-		ob_start();
-		echo '<pre>';
-		var_dump( $this->targets[$blog_id] );
-		echo '</pre>';
-
 		return $this->targets[$blog_id];
 	}
 
@@ -373,8 +368,12 @@ class Page_Links_Too
 
 		global $wp_query;
 
-		$link = get_post_meta( $wp_query->post->ID, '_links_to', true );
-		if( is_int( $link ) ) $link = get_permalink( $link );
+		$meta = get_post_meta( $wp_query->post->ID, '_links_to', true );
+		$link = (int) $meta;
+		if( is_int( $link ) && $link != 0 ) 
+			$link = get_permalink( (int) $link );
+		else
+			$link = $meta;
 
 		if ( ! $link )
 			return;
