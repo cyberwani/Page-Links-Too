@@ -1,4 +1,4 @@
 Page Links Too
 ==============
 
-This plugin is based in Page Link To of @markjaquith
+This plugin is based on Page Link To of @markjaquith. It is now possible to select a post url.
